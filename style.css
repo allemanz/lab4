@@ -1,0 +1,74 @@
+h1
+{
+  background-color: DodgerBlue;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 300px;
+  margin-left: 300px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+p
+{
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 500px;
+  margin-left: 500px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: white;
+}
+
+table
+{
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  background-color: rebeccapurple;
+}
+
+th
+{
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  background-color: Plum;
+  padding: 8px;
+}
+
+tr
+{
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+td
+{
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  background-color: pink;
+  padding: 8px;
+}
+
+body
+{
+  background-color: lightgrey;
+  background-image: url(apple.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+button
+{
+  color: Black;
+  background-color: LightSlateGrey;
+  font-size: 12pt;
+  padding: 10px 12px;
+}

@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head><title>Zach's Fruit Store</title></head>
+<head>
+<link href='style.css' rel='stylesheet' type='text/css'/>
+<center><title>Zach's Fruit Store</title></head>
 <body>
 
-<h2>Zach's Online Fruit Emporium</h2>
+<h1>Zach's Online Fruit Emporium</h1>
 
-<form action="https://people.eecs.ku.edu/~z729a780/lab4/customerBackend.php" id="order" method ="POST">
-  <p>We have Apples, Bananas, and Oranges.</p>
-    How many apples at $1 a piece: &ensp;&ensp;<input type="number" id="apples" value="0" min="0"></input><br>
-    How many bananas at $3 a piece: <input type="number" id="bananas" value="0" min="0"></input><br>
-    How many oranges at $2 a piece: <input type="number" id="oranges" value="0" min="0"></input><br><br>
-  <p>Shipping Options</p>
-    <input type="radio" name="shippingOption" value="1" checked> 7 day: Free <br>
+<form action="https://people.eecs.ku.edu/~z729a780/lab4/customerBackend.php" method ="POST" id="order">
+  <p>We have Apples, Bananas, and Oranges.</p><p>
+    How many apples at $1 a piece: &ensp;&ensp;<input type="number" name="apples" id="apples" value="0" min="0"></input><br>
+    How many bananas at $3 a piece: <input type="number" name="bananas" id="bananas" value="0" min="0"></input><br>
+    How many oranges at $2 a piece: <input type="number" name="oranges" id="oranges" value="0" min="0"></input></p><br>
+  <p>Shipping Options</p><p>
+    <input type="radio" name="shippingOption" id="shipping" value="1" checked> 7 day: Free <br>
     <input type="radio" name="shippingOption" value="2"> 3 day: $5<br>
-    <input type="radio" name="shippingOption" value="3"> Overnight: $50<br><br>
-  Input an email and password:<br>
-    Email: &ensp;&ensp;&ensp; <input type="text" id="email"></input><br>
-    Password: <input type="password" id="pass"></input>
+    <input type="radio" name="shippingOption" value="3"> Overnight: $50</p><br>
+<p>  Input an email and password:<br>
+    Email: &ensp;&ensp;&ensp; <input type="text" name="email" id="email"></input><br>
+    Password: <input type="password" name="pass" id="pass"></input></p>
 </form>
 <script>
   function validateInputs()
@@ -32,10 +34,19 @@
       alert("Invalid log in.");
     }
   }
+  function reset()
+  {
+    document.getElementById("apples").value = 0;
+    document.getElementById("bananas").value = 0;
+    document.getElementById("oranges").value = 0;
+    document.getElementById("shipping").checked = true;
+    document.getElementById("email").value = "";
+    document.getElementById("pass").value = "";
+  }
 </script>
+<button onclick="reset()"> Reset order </button>
 <button onclick="validateInputs()"> Confirm and submit order </button>
 
-<p></p>
 
 </body>
 </html>
